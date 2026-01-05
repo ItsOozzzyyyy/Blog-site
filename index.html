@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#0f172a">
+    <title>My Blog — Modern 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="#">My Blog</a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Categories</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap site-main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Thoughtful writing about web, design, and code</h1>
+                <p class="lead">Curated essays, tutorials, and practical tips to help you build modern user experiences — concise and readable.</p>
+                <a class="btn" href="#latest">Read latest</a>
+            </div>
+            <div class="hero-visual" aria-hidden="true"></div>
+        </section>
+
+        <section class="content-grid">
+            <section class="posts" id="latest">
+                <article class="post-card">
+                    <div class="thumb" style="background-image:linear-gradient(135deg,#7c3aed,#06b6d4)"></div>
+                    <div class="post-body">
+                        <h2 class="post-title">Shipping Fast, Shipping Well</h2>
+                        <p class="excerpt">How to balance speed and quality when shipping features — practical strategies teams can apply today.</p>
+                        <div class="meta">Jan 5, 2026 • 6 min read</div>
+                        <a class="read-more" href="#">Read</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="thumb" style="background-image:linear-gradient(135deg,#f97316,#ef4444)"></div>
+                    <div class="post-body">
+                        <h2 class="post-title">Design Tokens: The Source of Truth</h2>
+                        <p class="excerpt">A short guide to design tokens, why they matter, and how to integrate them into your workflow.</p>
+                        <div class="meta">Dec 12, 2025 • 8 min read</div>
+                        <a class="read-more" href="#">Read</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="thumb" style="background-image:linear-gradient(135deg,#06b6d4,#3b82f6)"></div>
+                    <div class="post-body">
+                        <h2 class="post-title">Small JS Patterns That Scale</h2>
+                        <p class="excerpt">Tiny JavaScript patterns that keep your app maintainable as it grows.</p>
+                        <div class="meta">Oct 3, 2025 • 7 min read</div>
+                        <a class="read-more" href="#">Read</a>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3>About</h3>
+                    <p>I'm a designer-developer writing about frontend engineering, tooling, and design systems.</p>
+                </div>
+
+                <div class="widget">
+                    <h3>Recent Posts</h3>
+                    <ul class="recent-posts">
+                        <li><a href="#">Shipping Fast, Shipping Well</a></li>
+                        <li><a href="#">Design Tokens: The Source of Truth</a></li>
+                        <li><a href="#">Small JS Patterns That Scale</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3>Subscribe</h3>
+                    <form class="subscribe" onsubmit="event.preventDefault()">
+                        <input type="email" placeholder="Your email" aria-label="Email" />
+                        <button class="btn" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>© 2026 My Blog — Built with care.</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('themeToggle');
+        const root = document.documentElement;
+        btn.addEventListener('click', ()=>{
+            const dark = root.getAttribute('data-theme') === 'dark';
+            root.setAttribute('data-theme', dark ? 'light' : 'dark');
+        });
+    </script>
+</body>
+</html>
