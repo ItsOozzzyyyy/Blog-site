@@ -13,7 +13,7 @@
 [data-theme='dark']{
   --bg: #071123;
   --panel: #071823;
-  --muted: #94a3b8;
+  --accent: #ff6b6b;
   --text: #e6eef8;
   --accent: #06b6d4;
 }
@@ -21,12 +21,20 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{
+.hero-visual{height:220px;border-radius:16px;background-size:cover;background-position:center;box-shadow:0 8px 30px rgba(15,23,42,0.12)}
   background:var(--bg);
   color:var(--text);
+.btn{display:inline-block;background:var(--accent);color:white;padding:0.6rem 0.9rem;border-radius:10px;text-decoration:none;box-shadow:0 6px 18px rgba(255,107,107,0.18)}
   -webkit-font-smoothing:antialiased;
   line-height:1.6;
+.post-card{display:flex;flex-direction:column;background:var(--panel);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(2,6,23,0.08);transform:translateZ(0)}
   font-size:16px;
 }
+.post-card .thumb{height:160px;background-size:cover;background-position:center}
+
+.post-card:hover{transform:translateY(-6px);transition:transform 220ms ease}
+
+.post-body .post-title{color:var(--text)}
 
 .wrap{max-width:var(--max-width);margin:0 auto;padding:1rem}
 
